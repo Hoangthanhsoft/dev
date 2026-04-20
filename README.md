@@ -1,63 +1,67 @@
 # Tran Hoang Soft
 
-**Senior Software Engineer | Full-Stack & AI Systems**
+**Senior Software Engineer | AI-Powered Financial Systems**
 
-Passionate about building intelligent financial platforms that combine robust backend architecture with real-time AI capabilities.
+Building production-grade intelligent platforms that combine real-time AI, financial data pipelines, and scalable cloud architecture.
 
 ---
 
 ### 🚀 Featured Project: **2winai (ChatT)**
 
-AI-powered stock analysis and risk management platform designed for both web and mobile users.
+Full-stack AI platform for stock analysis, intelligent chatbot and risk management. Supports both Web (Flask) and Mobile (React Native) with unified backend deployed on Google Cloud Run.
 
-**Key Highlights:**
+**Core Capabilities:**
 
-- **Real-time Risk Management Engine**  
-  Built a sequential 7-dimensional risk analysis system (Market, Systemic, Sector, Company, Liquidity, Valuation, Technical).  
-  Implemented background processing with live progress tracking and incremental result display on frontend — users see results appear step-by-step as each risk module completes.
+- **Main Chatbot Engine**  
+  Natural language dashboard with intent & entity parsing via Rasa NLU. Routes queries intelligently and supports Expert Analysis mode that enriches context with real-time market data before sending to LLM.
 
-- **Intelligent Watchlist Agent**  
-  Developed an autonomous scheduling agent that continuously monitors user watchlists.  
-  Automatically detects significant trend changes using LLM analysis and sends timely alerts via email and in-app notifications.
+- **Real-time Multi-Dimensional Risk Management**  
+  Sequential analysis across 7 risk dimensions with background processing.  
+  Live progress tracking and incremental UI updates — users see each risk result appear one by one in real time.
 
-- **Scalable Cloud Architecture**  
-  Deployed on Google Cloud Run with automated CI/CD pipeline (GitHub Actions).  
-  Handles authentication, quota management, payment integration (PayPal), and secure data processing.
+- **Autonomous Watchlist Agent**  
+  Scheduled background agent that monitors user watchlists, detects significant trend/alert changes using LLM, and delivers timely notifications via email and in-app.
 
-- **Mobile-First API Layer**  
-  Designed RESTful endpoints with JWT authentication to support React Native mobile application, ensuring consistent experience across web and mobile platforms.
+- **Multi-LLM Orchestration**  
+  Integrates multiple large language models (including Grok, GPT, Gemini, DeepSeek and OpenRouter) with intelligent fallback for reliability and performance.
 
-- **Production-Ready Features**  
-  - User authentication & authorization (Flask-Login + custom JWT)  
-  - Rate limiting and usage quota system  
-  - Comprehensive logging with Google Cloud Logging  
-  - PostgreSQL database design with proper relationships  
-  - Real-time UI updates using polling and background threads
+- **Financial Data Integration**  
+  Connects to multiple financial data sources for accurate market information in analysis workflows.
 
----
+- **Admin Control Panel**  
+  Internal admin interface to manage system prompts, train/update Rasa models, monitor user activity and usage statistics.
 
-### 💼 Professional Expertise
-
-- **Backend Development**: Flask, Python, PostgreSQL, REST APIs, JWT  
-- **AI Integration**: Large Language Models (Grok, GPT, Gemini), prompt engineering, sequential multi-step AI workflows  
-- **Cloud & DevOps**: Google Cloud Run, GitHub Actions, Docker, CI/CD  
-- **Financial Systems**: Stock data processing, risk analysis, alert engines, payment gateways  
-- **Architecture**: Modular design, background task processing, real-time progress tracking, clean separation of concerns  
+- **Production-Grade Features**  
+  - Google OAuth + secure authentication  
+  - Subscription management with PayPal and usage quota system  
+  - Rate limiting and comprehensive cloud logging  
+  - CI/CD pipeline (GitHub Actions → Google Cloud Run)  
+  - JWT-based REST API layer for mobile app integration
 
 ---
 
-### 📈 What I Focus On
+### 💼 Technical Expertise
 
-Building reliable, maintainable, and user-centric systems that solve real-world problems in the financial domain.  
-Strong emphasis on **simplicity**, **accuracy**, and **production stability**.
+- **Backend & Architecture**: Flask, PostgreSQL, Background tasks & threading, Real-time progress, Modular & sequential processing  
+- **AI Layer**: Rasa NLU, Multi-LLM orchestration, Prompt engineering, Sequential AI workflows  
+- **Data & Integration**: Multiple financial market APIs, Real-time data enrichment  
+- **Cloud & DevOps**: Google Cloud Run, GitHub Actions, Docker, Cloud SQL  
+- **Security & Scalability**: Google OAuth, JWT, Rate limiting, Payment integration, Quota enforcement  
+
+---
+
+### 📈 Engineering Philosophy
+
+I focus on **simplicity, reliability, and clear user value**.  
+Every system is designed to be maintainable, observable in production, and deliver visible results step-by-step — whether real-time risk insights or automated market alerts.
 
 ---
 
 ### 📫 Get in Touch
 
 - Location: Vietnam  
-- Open to: Senior Software Engineer / Backend Engineer / AI Engineer opportunities  
-- Email: tranhoangsoft@gmail.com 
+- Open to: Senior Software Engineer / AI Engineer / Full-Stack Fintech roles (remote or onsite)  
+- Email: tranhoangsoft@gmail.com
 
 ---
 
