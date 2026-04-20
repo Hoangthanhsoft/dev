@@ -55,9 +55,9 @@ Strong emphasis on **simplicity**, **accuracy**, and **production stability**.
 
 ### 📫 Get in Touch
 
-- Location: Dong Nai, Vietnam  
+- Location: Vietnam  
 - Open to: Senior Software Engineer / Backend Engineer / AI Engineer opportunities  
-- Email: [your-email@example.com] *(replace with real email)*
+- Email: tranhoangsoft@gmail.com 
 
 ---
 
