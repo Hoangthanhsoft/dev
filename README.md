@@ -42,7 +42,7 @@ Full-stack AI platform for stock analysis, intelligent chatbot and risk manageme
 
 ### 💼 Technical Expertise
 
-- **Backend & Architecture**: Flask, PostgreSQL, Background tasks & threading, Real-time progress, Modular & sequential processing  
+- **Backend & Architecture**: Python, Flask, PostgreSQL, Background tasks & threading, Real-time progress, Modular & sequential processing  
 - **AI Layer**: Rasa NLU, Multi-LLM orchestration, Prompt engineering, Sequential AI workflows  
 - **Data & Integration**: Multiple financial market APIs, Real-time data enrichment  
 - **Cloud & DevOps**: Google Cloud Run, GitHub Actions, Docker, Cloud SQL  
