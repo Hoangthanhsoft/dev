@@ -6,61 +6,119 @@ Building production-grade intelligent platforms that combine real-time AI, finan
 
 ---
 
-### 🚀 Featured Project: **2winai (ChatT)**
+### 🚀 Featured Project: **2winai**
 
-Full-stack AI platform for stock analysis, intelligent chatbot and risk management. Supports both Web (Flask) and Mobile (React Native) with unified backend deployed on Google Cloud Run.
+Full-stack AI platform for financial market analysis, intelligent conversation, and automated risk & alert management.  
+Supports **Web (Flask)** and **Mobile (React Native)** with a unified backend deployed on **Google Cloud Run**.
 
-**Core Capabilities:**
+2winai is composed of **3 independent, self-contained systems** — each operates autonomously with no dependency on the others:
 
-- **Main Chatbot Engine**  
-  Natural language dashboard with intent & entity parsing via Rasa NLU. Routes queries intelligently and supports Expert Analysis mode that enriches context with real-time market data before sending to LLM.
+---
 
-- **Real-time Multi-Dimensional Risk Management**  
-  Sequential analysis across 7 risk dimensions with background processing.  
-  Live progress tracking and incremental UI updates — users see each risk result appear one by one in real time.
+#### 🤖 System 1 — AI Chatbot Engine
 
-- **Autonomous Watchlist Agent**  
-  Scheduled background agent that monitors user watchlists, detects significant trend/alert changes using LLM, and delivers timely notifications via email and in-app.
+A conversational AI interface for market queries and in-depth financial analysis.
 
-- **Multi-LLM Orchestration**  
-  Integrates multiple large language models (including Grok, GPT, Gemini, DeepSeek and OpenRouter) with intelligent fallback for reliability and performance.
+- Natural language understanding with intent and entity recognition (Rasa NLU)
+- **Two independent modes**, each with its own dedicated system prompt:
+  - **Normal Chat** — General financial Q&A
+  - **Expert Analysis** — Deep-dive queries with enriched live market context
+- Security validation applied on all user inputs before processing
+- Multi-LLM backend with primary/fallback strategy *(see LLM Strategy below)*
 
-- **Financial Data Integration**  
-  Connects to multiple financial data sources for accurate market information in analysis workflows.
+---
 
-- **Admin Control Panel**  
-  Internal admin interface to manage system prompts, train/update Rasa models, monitor user activity and usage statistics.
+#### ⚠️ System 2 — Risk Analysis Engine
 
-- **Production-Grade Features**  
-  - Google OAuth + secure authentication  
-  - Subscription management with PayPal and usage quota system  
-  - Rate limiting and comprehensive cloud logging  
-  - CI/CD pipeline (GitHub Actions → Google Cloud Run)  
-  - JWT-based REST API layer for mobile app integration
+Automated, multi-dimensional risk assessment — runs independently, triggered on demand or via scheduled jobs.
+
+- Analyzes multiple risk dimensions using LLM inference (API-based only — **no model training**)
+- Background processing with real-time UI progress: each dimension result appears incrementally as it completes
+- Designed to be modular; dimensions can be extended or reconfigured without affecting other systems
+
+---
+
+#### 🔔 System 3 — Alert & Watchlist Agent
+
+Autonomous background agent for continuous market monitoring — fully decoupled from Systems 1 and 2.
+
+- Monitors user watchlists on a scheduled basis
+- Detects significant trend changes and signal anomalies using LLM inference (API-based only — **no model training**)
+- Delivers timely notifications via **email** and **in-app alerts**
+- Operates entirely in the background with no user interaction required
+
+---
+
+### 🧠 Multi-LLM Strategy
+
+| Role | Models |
+|---|---|
+| **Primary** | One of: **Grok**, **Gemini**, or **ChatGPT** — selected based on reliability and performance |
+| **Fallback** | The remaining models activate automatically when the primary is unavailable, slow, or degraded |
+| **Extended** | **OpenRouter** used occasionally for additional model access |
+
+- The caller (chat, risk, alert) always knows which model is active — fallback is explicit and logged, not hidden
+- All LLMs are consumed via **API inference only — no fine-tuning, no training, no custom model development**
+
+---
+
+### 🏗️ Architecture Overview
+
+```
+┌──────────────────────────────────────────────────────────────┐
+│                        2winai Platform                        │
+│                (Google Cloud Run + Docker + CI/CD)            │
+├───────────────────┬──────────────────┬───────────────────────┤
+│   System 1        │   System 2       │   System 3            │
+│   AI Chatbot      │   Risk Analysis  │   Alert & Watchlist   │
+│   Engine          │   Engine         │   Agent               │
+│                   │                  │                       │
+│ • Rasa NLU        │ • Multi-dim      │ • Scheduled Agent     │
+│ • Normal mode     │   Risk Scoring   │ • Trend Detection     │
+│ • Expert mode     │ • Real-time      │ • Email + In-app      │
+│ • System prompts  │   Progress UI    │   Notifications       │
+│ • Input security  │ • Background     │ • Fully autonomous    │
+│                   │   Processing     │                       │
+└───────────────────┴──────────────────┴───────────────────────┘
+          │                  │                   │
+          └──────────────────┴───────────────────┘
+                      (each system independent)
+                             │
+              ┌──────────────▼──────────────┐
+              │       Multi-LLM Layer        │
+              │  Primary: Grok / Gemini /    │
+              │  ChatGPT  +  Fallback chain  │
+              └──────────────┬──────────────┘
+                             │
+              ┌──────────────▼──────────────┐
+              │   Financial Data APIs        │
+              │   PostgreSQL (Cloud SQL)     │
+              └─────────────────────────────┘
+```
 
 ---
 
 ### 💼 Technical Expertise
 
-- **Backend & Architecture**: Python, Flask, PostgreSQL, Background tasks & threading, Real-time progress, Modular & sequential processing  
-- **AI Layer**: Rasa NLU, Multi-LLM orchestration, Prompt engineering, Sequential AI workflows  
-- **Data & Integration**: Multiple financial market APIs, Real-time data enrichment  
-- **Cloud & DevOps**: Google Cloud Run, GitHub Actions, Docker, Cloud SQL  
-- **Security & Scalability**: Google OAuth, JWT, Rate limiting, Payment integration, Quota enforcement  
+- **Backend & Architecture**: Python, Flask, PostgreSQL, Background threading, Real-time streaming progress, Modular independent service design
+- **AI Layer**: Rasa NLU, Multi-LLM orchestration, Prompt engineering, Dedicated system prompts per mode, Input security validation
+- **Data & Integration**: Multiple financial market APIs, Real-time data enrichment pipelines
+- **Cloud & DevOps**: Google Cloud Run, GitHub Actions CI/CD, Docker, Cloud SQL
+- **Security & Scalability**: Google OAuth, JWT, Rate limiting, PayPal payment & subscription management, Usage quota enforcement
 
 ---
 
 ### 📈 Engineering Philosophy
 
 I focus on **simplicity, reliability, and clear user value**.  
-Every system is designed to be maintainable, observable in production, and deliver visible results step-by-step — whether real-time risk insights or automated market alerts.
+Each system is independently deployable and maintainable — observable in production, designed to fail gracefully, and built to deliver visible results step-by-step.
 
 ---
 
 ### 📫 Get in Touch
 
-- Location: Vietnam  
-- Open to: Senior Software Engineer / AI Engineer / Full-Stack Fintech roles (remote or onsite)  
+- Location: Vietnam
+- Open to: Senior Software Engineer / AI Engineer / Full-Stack Fintech roles (remote or onsite)
 - Email: tranhoangsoft@gmail.com
 
 ---
