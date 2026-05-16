@@ -1,4 +1,4 @@
-# Tran Hoang Soft
+# Tran Hoang (Tommy) Soft
 
 **Senior Software Engineer | AI-Powered Financial Systems**
 
@@ -16,6 +16,10 @@ Supports **Web (Flask)** and **Mobile (React Native)** with a unified backend de
 ---
 
 #### 🤖 System 1 — AI Chatbot Engine
+
+<p align="center">
+  <img src="images/2winai_Chat_UI.png" alt="Dashboard" width="900">
+</p>
 
 A conversational AI interface for market queries and in-depth financial analysis.
 
