@@ -20,7 +20,9 @@ Supports **Web (Flask)** and **Mobile (React Native)** with a unified backend de
 <p align="center">
   <img src="images/2winai_Chat_UI.png" alt="Dashboard" width="900">
 </p>
-![2winai dashboard](images/2winai_Chat_UI_2.png)
+<p align="center">
+  <img src="images/2winai_Chat_UI_2.png" alt="Dashboard" width="765">
+</p>
 
 A conversational AI interface for market queries and in-depth financial analysis.
 
@@ -34,6 +36,13 @@ A conversational AI interface for market queries and in-depth financial analysis
 ---
 
 #### ⚠️ System 2 — Risk Analysis Engine
+<p align="center">
+  <img src="images/2winai_Risk_Management_UI.png" alt="Dashboard" width="900">
+</p>
+<p align="center">
+  <img src="images/2winai_Risk_Management_UI_2.png" alt="Dashboard" width="900">
+</p>
+
 
 Automated, multi-dimensional risk assessment — runs independently, triggered on demand or via scheduled jobs.
 
@@ -44,6 +53,18 @@ Automated, multi-dimensional risk assessment — runs independently, triggered o
 ---
 
 #### 🔔 System 3 — Alert & Watchlist Agent
+
+<p align="center">
+  <img src="images/Stock_Ai_System_1.png" alt="Dashboard" width="754">
+</p>
+<p align="center">
+  <img src="images/Stock_Ai_System_2.png" alt="Dashboard" width="754">
+</p>
+
+<p align="center">
+  <img src="images/Stock_Ai_System_3.png" alt="Dashboard" width="754">
+</p>
+
 
 Autonomous background agent for continuous market monitoring — fully decoupled from Systems 1 and 2.
 
