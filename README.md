@@ -20,6 +20,7 @@ Supports **Web (Flask)** and **Mobile (React Native)** with a unified backend de
 <p align="center">
   <img src="images/2winai_Chat_UI.png" alt="Dashboard" width="900">
 </p>
+![2winai dashboard](images/2winai_Chat_UI_2.png)
 
 A conversational AI interface for market queries and in-depth financial analysis.
 
@@ -29,9 +30,7 @@ A conversational AI interface for market queries and in-depth financial analysis
   - **Expert Analysis** — Deep-dive queries with enriched live market context
 - Security validation applied on all user inputs before processing
 - Multi-LLM backend with primary/fallback strategy *(see LLM Strategy below)*
-<p align="center">
-  <img src="images/2winai_Chat_UI_2.png" alt="Dashboard" width="600">
-</p>
+
 ---
 
 #### ⚠️ System 2 — Risk Analysis Engine
