@@ -104,6 +104,9 @@ An internal desktop/web tool for managing the full lifecycle of the custom Rasa 
 <p align="center">
   <img src="images/2winai_Admin_Prompt_Manager.png" alt="Admin Prompt Manager" width="720">
 </p>
+<p align="center">
+  <img src="images/User_Management.png" alt="Admin Prompt Manager" width="720">
+</p>
 
 A full-featured internal admin panel for managing AI prompts, user settings, and operational data — the control center of the 2winai intelligence layer.
 
