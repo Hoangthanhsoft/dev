@@ -201,7 +201,8 @@ All user-reported issues and system error events are captured, structured, and *
 - **Data & Integration**: Multiple financial market APIs, Real-time data enrichment pipelines, Issue & error tracking persistence
 - **Cloud & DevOps**: Google Cloud Run, GitHub Actions CI/CD, Docker, Cloud SQL
 - **Admin & Tooling**: Internal admin panel (prompt CRUD, user management, error records, API config), Rasa Training Manager desktop tool
-- **Security & Scalability**: Google OAuth, JWT, Rate limiting, PayPal payment & subscription management, Usage quota enforcement
+- **Security & Scalability**: Google OAuth, JWT, Rate limiting, Secure input pipeline, Usage quota enforcement
+- **Payment Integration**: **PayPal** (global subscriptions & payments), **Google Pay** (Google-ecosystem billing), **VNPay** (Vietnam domestic payment gateway) — full payment lifecycle: checkout, webhook handling, subscription management, and quota enforcement
 
 ---
 
